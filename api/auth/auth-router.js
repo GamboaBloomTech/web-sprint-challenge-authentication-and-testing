@@ -25,7 +25,7 @@ router.post('/register', async (req, res) => {
     const newUser = await db('users').where({ id }).first();
     res.status(201).json(newUser);
   } catch (err) {
-    res.status(500).json({ message: 'Failed to register user' });
+    res.status(500).json({ message: 'username taken' });
   }
 });
 
