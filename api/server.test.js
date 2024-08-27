@@ -1,7 +1,7 @@
 const request = require('supertest');
 const bcrypt = require('bcrypt'); // Ensure bcrypt is imported
-const server = require('./server');
-const db = require('../data/dbconfig');
+const server = require('./server.js');
+const db = require('../data/dbconfig.js');
 
 beforeEach(async () => {
   await db('users').truncate(); // Clean up the users table before each test
